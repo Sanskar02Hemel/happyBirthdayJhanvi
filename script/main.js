@@ -27,10 +27,16 @@ const fetchData = () => {
 };
 
 // audio
+
 const audio = document.getElementById("myAudio");
 let durationInSeconds = 5; // Set the desired duration in seconds
 
-window.addEventListener("load", function () {
+window.addEventListener("click", function () {
+  audio.currentTime = 5; // Reset audio to start
+  audio.play(); // Start playing the audio
+});
+
+window.addEventListener("touchstart", function () {
   audio.currentTime = 5; // Reset audio to start
   audio.play(); // Start playing the audio
 });
